@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package net.ultrahex.mc.debugutils;
 
 public class ClientProxy extends CommonProxy {
 
