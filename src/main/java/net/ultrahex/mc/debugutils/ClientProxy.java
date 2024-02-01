@@ -1,8 +1,14 @@
 package net.ultrahex.mc.debugutils;
 
+import net.ultrahex.mc.debugutils.command.RecalcLightingCommand;
+
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
+
 public class ClientProxy extends CommonProxy {
 
-    // Override CommonProxy methods here, if you want a different behaviour on the client (e.g. registering renders).
-    // Don't forget to call the super methods as well.
-
+    @Override
+    public void serverStarting(FMLServerStartingEvent event) {
+        super.serverStarting(event);
+        event.registerServerCommand(new RecalcLightingCommand());
+    }
 }
